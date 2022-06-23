@@ -3,12 +3,12 @@ import { properties, colors, functions, snippets } from ".";
 
 const GlobalStyles = createGlobalStyle`
   * {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 300;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 600;
     box-sizing: border-box;
     font-size: 16px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
   }
   html, body {
@@ -18,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
     max-width: 100%;
     position: relative;
     overflow-x: hidden;
+    background-color: ${colors.dark};
   }
   body, h1, h2, h3, h4, h5, h6, p, figure {
     margin: 0;
@@ -68,6 +69,41 @@ const GlobalStyles = createGlobalStyle`
     &:hover{
       text-decoration: none;
     }
+  }
+
+
+
+  .root-page {
+    padding: 2rem;
+    max-width: ${properties.maxContentWidth};
+    margin: 0 auto;
+
+  }
+
+
+
+  .button {
+    background-color: ${colors.secondary};
+    color: ${colors.black};
+    padding: 0.3rem 1rem;
+    border: 2px solid ${colors.secondary};
+    border-radius: ${properties.borderRadius};
+    transition: all ${properties.transition};
+    &.transparent-white {
+      background-color: transparent;
+      border-color: ${colors.white};
+      color: ${colors.white};
+      &:hover, &:focus {
+        background-color: ${colors.white};
+        color: ${colors.black};
+      }
+    }
+  }
+
+  .button-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 `;
 

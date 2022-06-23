@@ -46,11 +46,12 @@ export const functions = {
 
 export const colors = {
   // Accents
-  primary: "#61496E",
-  secondary: "#c7a900",
+  primary: "#b054e1",
+  secondary: "#fcba28",
   tertiary: "#000",
   white: "#fff",
   black: "#000",
+  dark: "#121212",
   // Shades of Grey
   grey1: "#7f7f7f",
   grey2: "#adadad",
@@ -80,25 +81,16 @@ export const colors = {
 }
 
 export const resolutions = {
-  fullHD: "1919px",
-  tabletLarge: "991px",
-  tablet: "767px",
-  phone: "574px",
-  // Content Restriction
-  maxContentWidth: "608px",
 }
 
 export const properties = {
   // Dimensions, Paddings, and Margins
-  maxPageWidth: "960px",
-  maxFieldWidth: "27rem",
-  navHeight: "65px",
+  maxContentWidth: "90rem",
 
   // Effects
   boxShadow: `0px 2px 10px rgba(0, 0, 0, 0.1)`,
   transition: "150ms linear",
-  borderRadius: "30px",
-  smallBorderRadius: "10px",
+  borderRadius: "3px",
   highestZIndex: "10001",
 }
 
