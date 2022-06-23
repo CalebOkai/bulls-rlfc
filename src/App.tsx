@@ -17,7 +17,7 @@ import {
 
 
 export const paths = {
-  HOMEPAGE: "/",
+  HOME: "/",
 }
 export interface RouteType {
   path: string;
@@ -45,7 +45,7 @@ const App = () => {
           <ScrollToTop />
           <GlobalStyles />
           <Routes>
-            <Route path={paths.HOMEPAGE} element={<Home />} />
+            <Route path={paths.HOME} element={<Home />} />
             {/* Authenticated Routes */}
             <Route element={<AuthRoute />}>
               {authRoutes.map((route: any, index) => {
