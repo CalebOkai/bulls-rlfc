@@ -56,14 +56,7 @@ export const colors = {
   grey1: "#7f7f7f",
   grey2: "#adadad",
   grey3: "#E0E0E0",
-  grey4: "#F6F6F6",
-  grey5: "#3e3e3e",
-  grey6: "#434343",
-  grey7: "#EFEFEF",
-  grey8: "#F9F9F9",
-  grey9: "#E3E3E3",
-  grey10: "#1f1f1f",
-  grey11: "#dfdfdf",
+  grey4: "#2e2e2e",
   // Events
   error: "#c70000",
   warning: "#E5C209",
@@ -85,7 +78,9 @@ export const resolutions = {
 
 export const properties = {
   // Dimensions, Paddings, and Margins
-  maxContentWidth: "90rem",
+  maxContentWidth: "120rem",
+  clipPath: "polygon(20% 0,100% 0,100% 80%,80% 100%,0 100%,0 20%)",
+  reverseClipPath: "polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 100% 100%, 20% 100%, 0% 80%, 0 0)",
 
   // Effects
   boxShadow: `0px 2px 10px rgba(0, 0, 0, 0.1)`,

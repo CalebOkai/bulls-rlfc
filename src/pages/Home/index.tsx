@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Modal } from "react-responsive-modal";
 
 import Styles from "./styles";
-
 import { paths } from "../../App";
+import { importImages } from "../../utils/images";
 import logo from "../../assets/png/bull.png";
-import coverImg from "../../assets/png/1.jpg";
+import coverImg from "../../assets/png/home.jpg";
 
 
 
@@ -16,25 +16,20 @@ interface NvLnk {
 }
 const Home = () => {
   const [signInModal, setSignInModal] = useState<boolean>(false);
+  const [unrelenting, setUnrelenting] = useState<string[]>([]);
 
-  const navLinks: NvLnk[] = [
-    {
-      name: "NEWS",
-      path: paths.HOME,
-    },
-    {
-      name: "PLAYERS",
-      path: paths.HOME,
-    },
-    {
-      name: "CONTACT",
-      path: paths.HOME,
-    },
-    {
-      name: "ABOUT",
-      path: paths.HOME,
-    },
-  ]
+
+  useEffect(() => {
+    setUnrelenting(importImages(require.context(
+      "../../assets/png/unrelenting",
+      false,
+      /\.(png|jpe?g|svg)$/
+    )));
+  }, [])
+
+
+
+
 
   return (
     <Styles className="root-page">
@@ -45,24 +40,9 @@ const Home = () => {
         >
           <img src={logo} alt="" />
         </NavLink>
-        <div className="links">
-          {navLinks.map((link) =>
-            <NavLink
-              to={link.path}
-              className="nav-link"
-            >
-              {link.name}
-            </NavLink>
-          )}
-          <button
-            className="button"
-          >
-            MEMBER SIGN IN
-          </button>
-        </div>
       </header>
-
       <div className="root-content">
+
         {/* Banner */}
         <div id="Banner">
           <div id="bold">
@@ -112,6 +92,52 @@ const Home = () => {
             <div className="overlay" />
           </div>
         </div>
+
+        {/* Massive Side Steps */}
+        <section id="MSS">
+          <h2>
+            What started as a group of young lads getting to know a new sport, <br />
+            was not as exhilarating as it panned out to be...
+          </h2>
+          <div id="textFlipped">
+            <div className="massive">
+              <span>MASSIVE</span>
+            </div>
+            <div className="side-steps">
+              SIDE <span>STEPS</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Massive Side */}
+        {/* <section id="Unrelenting">
+          
+          <h2>
+            What started as a group of young lads getting to know a new sport, was not as exhilarating as it panned out to be...
+            </h2>
+          <ul className="list-images">
+            {unrelenting.map((image, index) =>
+              <li
+                key={index}
+                style={{
+                  backgroundImage: `url(${image})`,
+                  transform: `translate(calc(${index} * 3rem), calc(${index} * 3rem))`,
+                }} />
+            )}
+          </ul>
+          <div id="textFlipped">
+            <div className="massive">
+              MASSIVE
+            </div>
+            <div className="side-steps">
+              SIDE STEPS
+            </div>
+          </div>
+
+
+        </section>
+ */}
+
       </div>
     </Styles>
   );

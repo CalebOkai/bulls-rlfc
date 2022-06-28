@@ -74,10 +74,10 @@ const GlobalStyles = createGlobalStyle`
 
 
   .root-page {
-    padding: 2rem;
+    padding: 3rem 5rem;
     max-width: ${properties.maxContentWidth};
+    width: 100%;
     margin: 0 auto;
-
   }
 
 
