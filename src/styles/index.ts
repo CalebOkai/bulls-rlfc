@@ -74,6 +74,10 @@ export const colors = {
 }
 
 export const resolutions = {
+  desktop: "1919px",
+  tabletLarge: "991px",
+  tablet: "767px",
+  phone: "574px",
 }
 
 export const properties = {
